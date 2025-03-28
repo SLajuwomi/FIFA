@@ -2,36 +2,36 @@
 
 ## Project Description
 
-This Jupyter Notebook analyzes the FIFA 19 Complete Player Dataset using unsupervised learning (DBSCAN) to identify potentially undervalued player archetypes within specific positions (e.g., Strikers). The analysis focuses on clustering players based on position-specific composite skill metrics versus their market value ('Value').
-
-This project fulfills the requirements for the AI class assignment and serves as a practical example for CS students and football analysts interested in player valuation.
+This Jupyter Notebook performs unsupervised learning (DBSCAN) on the FIFA 19 player dataset to identify potentially undervalued player archetypes within specific positions (e.g., Strikers). The analysis focuses on clustering players based on position-specific composite skill metrics versus their market value ('Value'). The notebook follows the structure required for an AI class assignment, including introduction, EDA, preprocessing, model training/tuning, and conclusion.
 
 ## Data Source
 
-The analysis uses the [FIFA 19 Complete Player Dataset](https://www.kaggle.com/datasets/javagarm/fifa-19-complete-player-dataset) available on Kaggle.
+The analysis uses the "FIFA 19 Complete Player Dataset" available on Kaggle:
+[https://www.kaggle.com/datasets/javagarm/fifa-19-complete-player-dataset](https://www.kaggle.com/datasets/javagarm/fifa-19-complete-player-dataset)
+_(Note: The technical specification linked to a different dataset URL, but this plan uses the one specified here)_
 
-_(Original source link mentioned in technical specification was: https://www.kaggle.com/datasets/stefanoleone992/fifa-19-complete-player-dataset - this link appears dead, using the one provided in the implementation plan)_
-
-## Setup and Usage
+## Setup and Execution
 
 1.  **Clone the repository:**
     ```bash
     git clone <repository-url>
     cd <repository-directory>
     ```
-2.  **Place the dataset:** Download the `FIFA_19_COMPLETE_PLAYER_DATASET.csv` file from the Kaggle link above. Place the file in the root directory of this project, alongside the `fifa19_undervaluation_analysis.ipynb` notebook. (Alternatively, you can place it in a `./data/` subdirectory and update the `data_path` variable in Step 3 of the notebook).
-3.  **Install dependencies:** It is recommended to use a virtual environment.
+2.  **Download the dataset:** Download `FIFA_19_COMPLETE_PLAYER_DATASET.csv` from the Kaggle link above.
+3.  **Place the dataset:** Place the downloaded CSV file in the root directory of this project (the same directory as the `fifa19_undervaluation_analysis.ipynb` notebook). Alternatively, create a `data/` subdirectory and place the CSV file inside it, then update the `data_path` variable in the notebook accordingly.
+4.  **Install dependencies:** Ensure you have Python installed. It is recommended to use a virtual environment. Install the required libraries:
     ```bash
-    python -m venv venv
-    source venv/bin/activate # On Windows use `venv\Scripts\activate`
     pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-    # Optionally, create a requirements.txt file and run: pip install -r requirements.txt
+    # Or, if a requirements.txt file is provided:
+    # pip install -r requirements.txt
     ```
-4.  **Run Jupyter Notebook:**
+5.  **Run Jupyter Notebook:** Launch Jupyter Notebook or JupyterLab:
     ```bash
-    jupyter notebook fifa19_undervaluation_analysis.ipynb
+    jupyter notebook
+    # or
+    # jupyter lab
     ```
-    Alternatively, open the notebook in Jupyter Lab, VS Code, or Google Colab (uploading the data file might be necessary for Colab).
+    Open the `fifa19_undervaluation_analysis.ipynb` file and run the cells sequentially.
 
 ## Notebook Structure
 
